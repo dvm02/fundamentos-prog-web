@@ -19,32 +19,23 @@ main {
 
 /* Sombra suave */
 .shadow {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Con escala */
-.scaled {
-    transition: transform 0.3s ease-in-out;
-}
-.scaled:hover {
-    transform: scale(1.1);
-}
-
-/* Blanco y negro a colores */
-.grayscale {
-    filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
-}
-.grayscale:hover {
-    filter: grayscale(0%);
+    box-shadow: 10px 10px 40px rgb(0, 0, 0);
 }
 
 /* Con rotación */
 .rotated {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 .rotated:hover {
-    transform: rotate(5deg); /* Rota 5 grados */
+    transform: rotate(15deg); /* Rota 5 grados */
+}
+
+/* 360 grados */
+.spin {
+    transition: transform 1s ease-in-out;
+}
+.spin:hover {
+    transform: rotate(360deg);
 }
 
 /* Con borde animado */
@@ -60,16 +51,26 @@ main {
 .glow {
     transition: box-shadow 0.3s ease;
     }
-    .glow:hover {
+.glow:hover {
     box-shadow: 0 0 30px 15px #4193ff;
-    }
-
-/* 360 grados */
-.spin {
-    transition: transform 0.5s ease-in-out;
 }
-.spin:hover {
-    transform: rotate(360deg);
+
+/* Con desvanecimiento */
+.fade {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+.fade:hover {
+    opacity: 1;
+}
+
+/* Blanco y negro a colores */
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.grayscale:hover {
+    filter: grayscale(0%);
 }
 
 /* Con zoom */
@@ -84,20 +85,19 @@ main {
     transform: scale(1.2);
 }
 
+/* Con escala */
+.scaled {
+    transition: transform 0.3s ease-in-out;
+}
+.scaled:hover {
+    transform: scale(1.1);
+}
+
 /* Con borde degradado */
 .gradient-border {
     padding: 10px;
     background: linear-gradient(50deg, #ff6f61, #4a90e2);
     border-radius: 10px;
-}
-
-/* Con desvanecimiento */
-.fade {
-    opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
-}
-.fade:hover {
-    opacity: 1;
 }
 
 /* Con efecto "flip" */
